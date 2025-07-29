@@ -156,7 +156,7 @@ const ProductDetailsSection = () => {
 
                     <div
                         ref={featuresLeftRef}
-                        className="absolute left-4 md:left-16 top-1/4 md:top-1/2 transform -translate-y-1/2 space-y-6 z-10"
+                        className="absolute left-4 md:left-16 w-1/2 md:w-full top-1/4 md:top-1/2 transform -translate-y-1/2 space-y-6 z-10"
                     >
                         {securityFeatures.map((feature, index) => (
                             <div key={index} className="flex items-center gap-4">
@@ -184,7 +184,7 @@ const ProductDetailsSection = () => {
 
                     <div
                         ref={featuresRightRef}
-                        className="absolute right-4 md:right-16 top-1/4 md:top-1/2 transform -translate-y-1/2 space-y-6 z-10"
+                        className="absolute right-4 md:right-16 w-1/2 md:w-full top-1/4 md:top-1/2 transform -translate-y-1/2 space-y-6 z-10"
                     >
                         {complianceFeatures.map((feature, index) => (
                             <div key={index} className="flex items-center gap-4 justify-end">
