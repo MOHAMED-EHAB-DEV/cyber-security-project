@@ -156,23 +156,20 @@ const ProductDetailsSection = () => {
 
                     <div
                         ref={featuresLeftRef}
-                        className="absolute left-4 md:left-16 w-1/2 md:w-full top-1/3 md:top-1/2 transform -translate-y-1/2 space-y-6 z-10"
+                        className="absolute left-4 md:left-16 top-[65%] md:top-1/2 w-[90%] md:w-auto transform -translate-y-1/2 space-y-4 z-10"
                     >
                         {securityFeatures.map((feature, index) => (
                             <div key={index} className="flex items-center gap-4">
-                                <div
-                                    className="w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 flex-shrink-0"></div>
-                                <p className="text-slate-300 text-lg font-medium whitespace-nowrap">{feature}</p>
+                                <div className="w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 flex-shrink-0"></div>
+                                <p className="text-slate-300 text-base md:text-lg font-medium">{feature}</p>
                             </div>
                         ))}
                     </div>
 
                     <div
                         ref={imageRef}
-                        className="w-80 h-80 md:w-96 md:h-96 relative overflow-hidden z-30 bg-slate-700 rounded-full will-change-transform transform-gpu"
-                        style={{
-                            clipPath: 'circle(25% at center)'
-                        }}
+                        className="w-64 h-64 md:w-96 md:h-96 relative overflow-hidden z-30 bg-slate-700 rounded-full will-change-transform transform-gpu"
+                        style={{ clipPath: 'circle(25% at center)' }}
                     >
                         <img
                             src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
@@ -184,13 +181,12 @@ const ProductDetailsSection = () => {
 
                     <div
                         ref={featuresRightRef}
-                        className="absolute right-4 md:right-16 w-1/2 md:w-full top-1/3 md:top-1/2 transform -translate-y-1/2 space-y-6 z-10"
+                        className="absolute right-4 md:right-16 top-[75%] md:top-1/2 w-[90%] md:w-auto transform -translate-y-1/2 space-y-4 z-10"
                     >
                         {complianceFeatures.map((feature, index) => (
                             <div key={index} className="flex items-center gap-4 justify-end">
-                                <p className="text-slate-300 text-lg font-medium whitespace-nowrap">{feature}</p>
-                                <div
-                                    className="w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 flex-shrink-0"></div>
+                                <p className="text-slate-300 text-base md:text-lg font-medium">{feature}</p>
+                                <div className="w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 flex-shrink-0"></div>
                             </div>
                         ))}
                     </div>
