@@ -51,12 +51,16 @@ const ProductDetailsSection = () => {
                     scrollTrigger: {
                         trigger: sectionRef.current,
                         start,
-                        end: '+=3   00vh',
+                        end: '+=300vh',
                         scrub: 1,
                         pin: true,
                         pinSpacing: true,
                         anticipatePin: 1,
                         invalidateOnRefresh: true,
+                        onUpdate: (self) => {
+                            console.log('Timeline progress:', self.progress);
+                        },
+                        pinType: "transform"
                     }
                 });
 
@@ -140,12 +144,9 @@ const ProductDetailsSection = () => {
                 className="relative min-h-screen h-full bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden"
             >
                 <div ref={containerRef} className="relative w-full h-full flex items-center justify-center">
-
-                    {/* Background gradient overlay */}
                     <div
                         className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-transparent to-emerald-900/20"></div>
 
-                    {/* Heading */}
                     <h2
                         ref={headingRef}
                         className="absolute top-20 left-1/2 transform -translate-x-1/2 text-4xl md:text-6xl font-bold text-center bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent z-20"
@@ -153,7 +154,6 @@ const ProductDetailsSection = () => {
                         Security Platform
                     </h2>
 
-                    {/* Left Features */}
                     <div
                         ref={featuresLeftRef}
                         className="absolute left-8 md:left-16 top-1/2 transform -translate-y-1/2 space-y-6 z-10"
@@ -167,7 +167,6 @@ const ProductDetailsSection = () => {
                         ))}
                     </div>
 
-                    {/* Center Image */}
                     <div
                         ref={imageRef}
                         className="w-80 h-80 md:w-96 md:h-96 relative overflow-hidden z-30 bg-slate-700 rounded-full will-change-transform transform-gpu"
@@ -183,7 +182,6 @@ const ProductDetailsSection = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20"></div>
                     </div>
 
-                    {/* Right Features */}
                     <div
                         ref={featuresRightRef}
                         className="absolute right-8 md:right-16 top-1/2 transform -translate-y-1/2 space-y-6 z-10"
@@ -197,7 +195,6 @@ const ProductDetailsSection = () => {
                         ))}
                     </div>
 
-                    {/* Final Content Overlay */}
                     <div
                         ref={finalContentRef}
                         className="absolute inset-0 flex items-center justify-center bg-slate-900/95 backdrop-blur-sm z-50"
@@ -224,7 +221,6 @@ const ProductDetailsSection = () => {
                         </div>
                     </div>
 
-                    {/* Ambient light effects */}
                     <div
                         className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
                     <div
@@ -232,7 +228,6 @@ const ProductDetailsSection = () => {
                 </div>
             </section>
 
-            {/* Next Section - Product Details Content */}
             <section className="py-20 lg:py-32 bg-slate-800 relative">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center mb-16">
