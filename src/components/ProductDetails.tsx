@@ -9,7 +9,7 @@ interface Product {
   price: number;
 }
 
-const STRAPI_URL = "https://your-strapi-instance/api/products";
+const STRAPI_URL = import.meta.env.VITE_STRAPI_URL;
 
 const ProductDetails: React.FC<{ id: string }> = ({ id }) => {
   const [product, setProduct] = useState<Product | null>(null);
