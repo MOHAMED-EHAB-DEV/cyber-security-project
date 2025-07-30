@@ -2,9 +2,9 @@ import Navigation from "../../../components/Navigation";
 import ProductDetails from "../../../components/ProductDetails";
 
 interface PageProps {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>;
 }
 
 const Page = async ({ params }: PageProps) => {
