@@ -50,7 +50,7 @@ const Navigation = () => {
                     Home
                   </button>
                   <Link
-                      href="/store/page"
+                      href="/store"
                       className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
                   >
                     Store
@@ -122,7 +122,7 @@ const Navigation = () => {
                     Home
                   </button>
                   <Link
-                      href="/store/page"
+                      href="/store"
                       className="text-left text-slate-300 hover:text-cyan-400 text-sm font-medium transition-colors duration-200"
                   >
                     Store
