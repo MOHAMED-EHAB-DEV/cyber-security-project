@@ -28,8 +28,8 @@ const ProductDetails: React.FC<{ id: string }> = ({ id }) => {
           name: data.name,
           description: data.description,
           price: data.price,
-          image: data.image?.url
-              ? `http://localhost:1337${data.image.url}`
+          image: data.image?.formats.thumbnail.url
+              ? `http://localhost:1337${data.image.formats.thumbnail.url}`
               : "https://placehold.co/500x300",
         }
         setProduct(product);
