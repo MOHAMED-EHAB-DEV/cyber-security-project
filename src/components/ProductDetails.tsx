@@ -37,19 +37,25 @@ const ProductDetails: React.FC<{ id: string }> = ({ id }) => {
 
   return (
     <section className="py-20 bg-slate-900 min-h-screen">
-      <div className="max-w-2xl mx-auto px-6">
-        <Card>
-          <CardHeader>
-            <img src={product.image} alt={product.name} className="w-full h-64 object-cover rounded-t-xl" />
-            <CardTitle className="mt-4 text-3xl text-cyan-300">{product.name}</CardTitle>
-            <CardDescription className="text-slate-400">{product.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-semibold text-emerald-400 mb-4">${product.price}</div>
-          </CardContent>
-          <CardFooter>
-            <a href="/src/app/store" className="px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition">Back to Store</a>
-          </CardFooter>
+      <div className="max-w-4xl mx-auto px-6">
+        <Card className="bg-transparent border-none">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-6">
+            <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+              <img src={product.image} alt={product.name} className="w-full h-80 object-cover rounded-xl shadow-lg" />
+            </div>
+            <div className="w-full md:w-1/2 flex flex-col justify-center">
+              <CardHeader className="p-0 mb-4">
+                <CardTitle className="text-3xl text-cyan-300 mb-2">{product.name}</CardTitle>
+                <CardDescription className="text-slate-400 mb-4">{product.description}</CardDescription>
+              </CardHeader>
+              <CardContent className="p-0 mb-6">
+                <div className="text-2xl font-semibold text-emerald-400">${product.price}</div>
+              </CardContent>
+              <CardFooter className="p-0">
+                <a href="/src/app/store" className="inline-block px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition">Back to Store</a>
+              </CardFooter>
+            </div>
+          </div>
         </Card>
       </div>
     </section>
