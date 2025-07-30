@@ -8,7 +8,7 @@ interface PageProps {
 }
 
 const Page = async ({ params }: PageProps) => {
-    const { id } = params;
+    const { id } = await params;
     if (!id) return <div className="text-center py-20">Invalid product ID.</div>;
 
     return (
