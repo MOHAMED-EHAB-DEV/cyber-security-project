@@ -51,17 +51,14 @@ const ProductDetailsSection = () => {
                     scrollTrigger: {
                         trigger: sectionRef.current,
                         start,
-                        end: '+=300vh',
+                        end: '+=200vh',
                         scrub: 1,
                         pin: true,
                         pinSpacing: true,
                         anticipatePin: 1,
                         invalidateOnRefresh: true,
-                        onUpdate: (self) => {
-                            console.log('Timeline progress:', self.progress);
-                        },
-                        pinType: "transform"
-                    }
+                        pinType: "transform",
+                    },
                 });
 
                 tl.fromTo(headingRef.current,
@@ -141,7 +138,8 @@ const ProductDetailsSection = () => {
         <>
             <section
                 ref={sectionRef}
-                className="relative min-h-screen h-full bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden"
+                id="product-details"
+                className="relative min-h-screen pb-52 h-full bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden"
             >
                 <div ref={containerRef} className="relative w-full h-full flex items-center justify-center">
                     <div
@@ -193,7 +191,7 @@ const ProductDetailsSection = () => {
 
                     <div
                         ref={finalContentRef}
-                        className="absolute inset-0 flex items-center justify-center bg-slate-900/95 backdrop-blur-sm z-50"
+                        className="absolute inset-0 h-screen flex items-center justify-center bg-slate-900/95 backdrop-blur-sm z-50"
                     >
                         <div className="text-center max-w-4xl px-6">
                             <h3 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">

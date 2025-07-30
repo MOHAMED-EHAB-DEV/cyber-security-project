@@ -44,10 +44,10 @@ const HeroSection = () => {
           ref={titleRef}
           className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-100 via-cyan-100 to-emerald-100 bg-clip-text text-transparent leading-tight"
         >
-          Advanced Cyber
+          Total Security
           <br />
           <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-            Security
+            One Partner
           </span>
         </h1>
 
@@ -55,12 +55,12 @@ const HeroSection = () => {
           ref={subtitleRef}
           className="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Protect your digital assets with enterprise-grade security solutions that defend against evolving threats
+          Physical and Cybersecurity Services Built to Protect Your Business, Inside and Out
         </p>
         
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-900 font-semibold rounded-full hover:from-cyan-400 hover:to-emerald-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-            Start Protection
+            Explore Our Services
           </button>
           <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400/10 transform hover:scale-105 transition-all duration-300">
             Security Assessment
