@@ -1,10 +1,8 @@
-import React from "react";
-import { useParams } from "react-router-dom";
 import Navigation from "../../../components/Navigation.tsx";
 import ProductDetails from "../../../components/ProductDetails.tsx";
 
-const ProductIdPage: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+const Page = ({ params } : { params: { id: string } }) => {
+  const { id } = params;
   if (!id) return <div className="text-center py-20">Invalid product ID.</div>;
   return (
     <div className="min-h-screen bg-slate-900">
@@ -14,4 +12,4 @@ const ProductIdPage: React.FC = () => {
   );
 };
 
-export default ProductIdPage;
+export default Page;
