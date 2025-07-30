@@ -19,10 +19,20 @@ const ProductDetails: React.FC<{ id: string }> = ({ id }) => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`${Strapi_URL}/${id}`)
+    fetch(`${Strapi_URL}/${id}?populate=image`)
       .then((res) => res.json())
       .then((data) => {
-        setProduct(data.data || null);
+        const product = {
+          id: data.id,
+          documentId: data.documentId,
+          name: data.name,
+          description: data.description,
+          price: data.price,
+          image: data.image?.url
+              ? `http://localhost:1337${data.image.url}`
+              : "https://placehold.co/500x300",
+        }
+        setProduct(product);
         setLoading(false);
       })
       .catch(() => {
@@ -39,7 +49,7 @@ const ProductDetails: React.FC<{ id: string }> = ({ id }) => {
     <section className="py-20 bg-slate-900 min-h-screen">
       <div className="max-w-4xl mx-auto px-6">
         <Card className="bg-transparent border-none">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-6">
+          <div className="flex flex-col md:flex-row datas-center md:datas-start gap-8 p-6">
             <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
               <img src={product.image} alt={product.name} className="w-full h-80 object-cover rounded-xl shadow-lg" />
             </div>

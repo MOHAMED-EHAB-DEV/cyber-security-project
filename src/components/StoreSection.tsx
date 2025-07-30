@@ -31,7 +31,7 @@ const StoreSection: React.FC = () => {
                     price: item.price,
                     image: item.image?.url
                         ? `http://localhost:1337${item.image.url}`
-                        : "https://placehold.co/500x300", // fallback image
+                        : "https://placehold.co/500x300",
                 }));
 
                 setProducts(products);
