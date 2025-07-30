@@ -11,7 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
-/strapi-backend
+strapi-backend
+.next
+.idea
+
 
 # Editor directories and files
 .vscode/*

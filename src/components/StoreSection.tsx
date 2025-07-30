@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from "./ui/card";
 
@@ -9,7 +11,7 @@ interface Product {
   price: number;
 }
 
-const STRAPI_URL = import.meta.env.VITE_STRAPI_URL;
+const STRAPI_URL = process?.env?.NEXT_PUBLIC_STRAPI_URL;
 
 const StoreSection: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);

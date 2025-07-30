@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
-import {Link} from "react-router-dom";
+import Link from "next/link";
 
 const Navigation = () => {
   const navRef = useRef<HTMLElement>(null);
@@ -50,7 +50,7 @@ const Navigation = () => {
                     Home
                   </button>
                   <Link
-                      to="/store"
+                      href="/store/page"
                       className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
                   >
                     Store
@@ -122,7 +122,7 @@ const Navigation = () => {
                     Home
                   </button>
                   <Link
-                      to="/store"
+                      href="/store/page"
                       className="text-left text-slate-300 hover:text-cyan-400 text-sm font-medium transition-colors duration-200"
                   >
                     Store
