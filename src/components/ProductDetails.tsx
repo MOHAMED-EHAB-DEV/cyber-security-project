@@ -23,15 +23,15 @@ const ProductDetails: React.FC<{ id: string }> = ({ id }) => {
       .then((res) => res.json())
       .then((data) => {
         const product = {
-          id: data.id,
-          documentId: data.documentId,
-          name: data.name,
-          description: data.description,
-          price: data.price,
-          image: data.image?.formats.thumbnail.url
-              ? `${data.image.formats.thumbnail.url}`
+          id: data.data.id,
+          documentId: data.data.documentId,
+          name: data.data.name,
+          description: data.data.description,
+          price: data.data.price,
+          image: data.data.image?.url
+              ? data.data.image.url
               : "https://placehold.co/500x300",
-        }
+        };
         setProduct(product);
         setLoading(false);
       })

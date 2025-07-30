@@ -30,7 +30,7 @@ const StoreSection: React.FC = () => {
                     description: item.description,
                     price: item.price,
                     image: item.image?.url
-                        ? `http://localhost:1337${item.image.url}`
+                        ? item.image.url
                         : "https://placehold.co/500x300",
                 }));
 

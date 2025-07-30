@@ -11,7 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
-strapi-backend
+strapi-backend/node_modules
+strapi-backend/dist
 .next
 .idea
 
