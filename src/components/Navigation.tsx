@@ -37,18 +37,18 @@ const Navigation = () => {
             <div className="flex items-center justify-between h-16">
               <div className="flex-shrink-0">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                  🛡️ CyberShield
+                  <Link href="/">🛡️ CyberShield</Link>
                 </h1>
               </div>
 
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-8">
-                  <button
-                      onClick={() => scrollToSection('hero')}
+                  <Link
+                      href="/"
                       className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
                   >
                     Home
-                  </button>
+                  </Link>
                   <Link
                       href="/store"
                       className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
@@ -67,6 +67,12 @@ const Navigation = () => {
                   >
                     Security Platform
                   </button>
+                  <Link
+                    href="/auth"
+                    className="ml-6 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded transition text-sm font-semibold"
+                  >
+                    Sign In / Sign Up
+                  </Link>
                 </div>
               </div>
 
@@ -115,12 +121,12 @@ const Navigation = () => {
                       ✕
                     </button>
                   </div>
-                  <button
-                      onClick={() => scrollToSection('hero')}
+                  <Link
+                      href="/"
                       className="text-left text-slate-300 hover:text-cyan-400 text-sm font-medium transition-colors duration-200"
                   >
                     Home
-                  </button>
+                  </Link>
                   <Link
                       href="/store"
                       className="text-left text-slate-300 hover:text-cyan-400 text-sm font-medium transition-colors duration-200"
@@ -139,6 +145,12 @@ const Navigation = () => {
                   >
                     Security Platform
                   </button>
+                  <Link
+                      href="/auth"
+                      className="text-left text-cyan-400 bg-cyan-900 px-4 py-2 rounded font-semibold mt-4"
+                  >
+                    Sign In / Sign Up
+                  </Link>
                 </motion.div>
               </>
           )}
