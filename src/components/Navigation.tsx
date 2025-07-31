@@ -43,12 +43,12 @@ const Navigation = () => {
 
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-8">
-                  <button
-                      onClick={() => scrollToSection('hero')}
+                  <Link
+                      href="/"
                       className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
                   >
                     Home
-                  </button>
+                  </Link>
                   <Link
                       href="/store"
                       className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
