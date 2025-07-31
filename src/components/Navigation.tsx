@@ -37,7 +37,7 @@ const Navigation = () => {
             <div className="flex items-center justify-between h-16">
               <div className="flex-shrink-0">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                  🛡️ CyberShield
+                  <Link href="/">🛡️ CyberShield</Link>
                 </h1>
               </div>
 
